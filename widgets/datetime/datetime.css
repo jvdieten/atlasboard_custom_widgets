@@ -1,0 +1,31 @@
+.content {
+	font-size: 100px;
+	color: white;
+	font-weight: bold;
+	text-align: right;
+	display: inline-block;
+	margin-left: 10px;
+	float: left;
+}
+
+.clock-date {
+	margin-top: 10px;
+	text-align: center;
+	color: white;
+}
+
+.time-colon {
+	font-size: 80px;
+	vertical-align: text-top;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.time-colon-1 {
+	color: #01DF01;
+}
+
+.clock-date {
+	font-size: 0.5em;
+	margin-top: -80px;
+}

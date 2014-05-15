@@ -1,0 +1,46 @@
+.content {
+	display: inline-block;
+}
+
+table {
+	color:white;
+	font-size:30px;
+	margin:20px;
+	border:#ccc 0px solid;
+
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+
+}
+table th {
+	border-top:0px solid #fafafa;
+	border-bottom:0px solid #e0e0e0;
+
+}
+table th:first-child {
+	text-align: left;
+	padding-left:20px;
+}
+
+table td:first-child {
+	text-align: left;
+	padding-left:20px;
+	border-left: 0;
+}
+table td {
+	padding-top: 10px;
+	padding-right:30px;
+	padding-left: 20px;
+	border-top: 0px solid #ffffff;
+	border-bottom:0px solid #e0e0e0;
+	border-left: 0px solid #e0e0e0;
+}
+
+.passed {
+	color: #01DF01;
+}
+
+.failed {
+	color: red;
+}

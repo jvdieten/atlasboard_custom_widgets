@@ -1,0 +1,64 @@
+{
+  "layout": {
+      "title": false,
+      "customJS" : ["jquery.peity.js"],
+      "widgets" : [
+          {"row" : 1, "col" : 1, "width" : 2, "height" : 1, "widget" : "datetime",            "job" : "datetime",    "config": "datetime"},
+          {"row" : 1, "col" : 2, "width" : 2, "height" : 2, "widget" : "sonar",               "job" : "sonar",     "config": "sonar"},
+          {"row" : 2, "col" : 1, "width" : 3, "height" : 3, "widget" : "fitnesse",            "job" : "fitnesse",     "config": "fitnesse"},
+          {"row" : 2, "col" : 1, "width" : 2, "height" : 1, "widget" : "issuecount",          "job" : "issuecount",     "config": "issuecount"},
+          {"row" : 3, "col" : 2, "width" : 3, "height" : 2, "widget" : "jenkins-builds",      "job" : "jenkins-builds",     "config": "jenkins-builds"}
+
+     ]
+  },
+
+  "config" : {
+    "jenkins-builds": {
+        "serverUrl": "https://cleancoder.ci.cloudbees.com",
+        "interval": 60000,
+        "job": "fitnesse"
+    },
+    "sonar": {
+        "interval": 6000,
+        "serverUrl": "https://sonar-ci.codehaus.org",
+        "resource": "Sonar"
+    },
+    "fitnesse": {
+        "interval": 60000,
+        "serverUrl": "<host>",
+        "suiteName": "<suitname>",
+        "projectName": "<name widget title>"
+    },
+    "datetime": {
+        "interval": 1000,
+        "lang": "en"
+    },
+    "issuecount":{
+      "interval":  60000,
+      "title":     "Jira overzicht",
+      "jiraServer":"<host>",
+      "authName":"JIRA",
+      "sections":  [
+        {
+          "counts":[
+            {
+              "label":"stories",
+              "jql":"project in(VOoruit) and issuetype in (Story) and Sprint = 'Sprint 27'"
+            }
+            
+          ]
+        },
+        {
+          "counts":[
+            {
+              "label":"incidenten",
+              "jql":"project in(VOoruit) and issuetype in (Incident) and Sprint = 'Sprint 27'"
+            }
+            
+          ]
+        }
+      ]
+    }
+
+  }
+}
